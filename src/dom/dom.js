@@ -1050,11 +1050,12 @@ p5.prototype.createColorPicker = function(value) {
  * @param {String} [value]
  * @return {p5.Element}
  */
-p5.prototype.createInput = function(value = '', type = 'text') {
+p5.prototype.createInput = function(value = '', type = 'text', step = "0") {
   p5._validateParameters('createInput', arguments);
   let elt = document.createElement('input');
   elt.setAttribute('value', value);
   elt.setAttribute('type', type);
+  elt.setAttribute('step', step);
   return addElement(elt, this);
 };
 
